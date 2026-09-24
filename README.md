@@ -413,6 +413,20 @@ For issues or suggestions, please:
 
 ---
 
+## AI agents (Laravel Boost)
+
+This package ships [Laravel Boost](https://github.com/laravel/boost) resources: a short guideline that is always loaded, and an on-demand `sharpapi-invoice-parser` skill covering invoice file parsing, the list-shaped result, queued polling, failures and test mocks. Boost 2 or newer is required.
+
+```bash
+composer require laravel/boost --dev
+php artisan boost:install             # first time
+php artisan boost:update --discover   # already using Boost
+```
+
+Select `sharpapi/laravel-invoice-parser` when Boost asks which packages to include.
+
+---
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for a detailed list of changes.
