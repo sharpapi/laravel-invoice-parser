@@ -21,6 +21,7 @@ class InvoiceParserService extends SharpApiClient
     public function __construct()
     {
         parent::__construct(config('sharpapi-invoice-parser.api_key'));
+        $this->setUseCustomInterval((bool) config('sharpapi-invoice-parser.api_job_status_use_polling_interval', false));
         $this->setApiBaseUrl(
             config(
                 'sharpapi-invoice-parser.base_url',
